@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini games</title>
+    <style>
+        h3{
+            font-size: 30px;
+            position: absolute;
+            left: 750px;
+            color: white;
+        }
+          h1{
+            font-size: 50px;
+            position: absolute;
+            left: 600px;
+            top: 30px;
+            color: rgb(216, 194, 72);
+        }
+         p{
+            font-size: 18px;
+            position: absolute;
+            left: 640px;
+            top: 110px;
+            color: white;
+        }
+        .box{
+            width: auto;
+            height: 160px;
+            box-shadow: 0 0 15px white;
+            border-radius: 50px;
+        }
+        #box1{
+            border: 1px solid white;
+            width:300px;
+            height: 350px;
+            box-shadow: 0 0 5px white;
+            border-radius: 10px;
+            position: absolute;
+            left: 50px;
+            top: 357px;
+            transition: all 0.3s ease-in-out;
+        }
+        #box1:hover{
+            transform:  translateY(-20px);
+        }
+       
+            #box2{
+            border: 1px solid white;
+            width:300px;
+            height: 350px;
+            box-shadow: 0 0 5px white;
+            border-radius: 10px;
+            position: absolute;
+            left: 500px;
+            top: 357px;
+            transition: all 0.3s ease-in-out;
+        }
+        #box2:hover{
+            transform:  translateY(-20px);
+        }
+            #box3{
+            border: 1px solid white;
+            width:300px;
+            height: 350px;
+            box-shadow: 0 0 5px white;
+            border-radius: 10px;
+            position: absolute;
+            left: 940px;
+            top: 357px;
+            transition: all 0.3s ease-in-out;
+        }
+        #box3:hover{
+            transform: translateY(-20px);
+        }
+             #box4{
+            border: 1px solid white;
+            width:300px;
+            height: 350px;
+            box-shadow: 0 0 5px white;
+            border-radius: 10px;
+            position: absolute;
+            left: 1350px;
+            top: 357px;
+            transition: all 0.3s ease-in-out;
+        }
+        #box4:hover{
+            transform:  translateY(-20px);
+        }
+        button{
+            background-color: rgb(32, 182, 251);
+              border-radius: 10px;
+               color:white;
+               width: 170px;
+               transition: all 0.3s ease-in-out;
+               padding: 10px;
+               font-weight: bolder;
+        }
+        button:hover{
+            transform:  scale(1.1);
+        }
+        #name{
+        font-size: 32px; 
+        font-family: 'poppins',sans-serif;
+        position: absolute;
+        top: 580px;
+        }
+        @media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h3 {
+        position: static;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        position: static;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    p {
+        position: static;
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 20px 20px;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #box1,
+    #box2,
+    #box3,
+    #box4 {
+        position: static;
+        width: 85%;
+        height: 300px;
+        margin: 20px auto;
+        display: block;
+        transform: none;
+    }
+
+    #box1:hover,
+    #box2:hover,
+    #box3:hover,
+    #box4:hover {
+        transform: translateY(-10px);
+    }
+
+    button {
+        width: 140px;
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    #name {
+        position: static;
+        text-align: center;
+        font-size: 22px;
+        margin: 10px auto;
+    }
+}
+
+    </style>
+</head>
+<body style="background-color: #0B061E;">
+    <header>
+        <div class="box">
+     <h3>WELCOME TO</h3>
+     <h1>🎉MINI GAME HUB🎉</h1>
+     <p>Play fun mini games. Challenge yourself. Beat your high score!</p></div></header>
+     <main><h2 style="color:white; position: absolute; top: 250px;">🎮 ALL GAMES</h2>
+    <div id="box1">
+       <img src="https://play-lh.googleusercontent.com/qu_Fa0j0Mc06WBqrMbQbfBAVMVnB1ZTpu_wfEXXanWRKqs-SWnAJAznDneYIu_ocTTMHhiK2JZ5Ikumq6w3_1Ag"   width=300px height=250px style="border-radius: 0px; border-bottom: 3px solid white;">
+    </div>
+    <p id="name" style=" left:110px;">Tic Tac Toe</p>
+    <button onclick="window.location.href='tic-tac-toe.html'" style="position: absolute;  left: 113px; top: 660px;">PLAY NOW →</button>
+      <div id="box2">
+       <img src="https://img.magnific.com/premium-vector/hands-playing-rock-paper-scissors-game-flat-design-style-vector-illustration_540284-598.jpg?semt=ais_hybrid&w=740&q=80"width=300px height=250px style="border-radius: 10px; border-bottom: 3px solid white;">
+    </div>
+     <p id="name"style=" left:504px;">Rock.Paper.Scissors</p>
+      <button onclick="window.location.href='RPS.html'" style="position: absolute;  left: 570px; top: 660px;">PLAY NOW →</button>
+      <div id="box3">
+       <img src="https://play-lh.googleusercontent.com/Z1d0ewJTqklEvHtBPA_1b3Jqjc095aJ7FePuImKmwgAj0sWwaIN3tif8yQE6dwTQGjrgVYCeejkIXRo2YEA5"width=300px height=250px style="border-radius: 10px; border-bottom: 3px solid white;">
+    </div>
+     <p id="name"style=" left:960px;">Guessing Number</p>
+      <button onclick="window.location.href= 'guessno.html'" style="position: absolute;  left: 1013px; top: 660px;">PLAY NOW →</button>
+      <div id="box4">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgVcrKHzjho2ot7Ny8JFc9AK3ESrfD0g8qyCWWVuYpX1BEdz-rkn3VkJk&s=10"width=300px height=250px style="border-radius: 10px; border-bottom: 3px solid white;">
+    </div>
+     <p id="name"style=" left:1430px;">Dice Roll</p>
+    <button onclick="window.location.href= 'diceroll.html'" style="position: absolute;  left: 1423px; top: 660px;">PLAY NOW →</button>
+    </main>
+</body>
+</html>
