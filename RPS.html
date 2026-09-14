@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #0b061e;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    width: 900px;
+    height: 750px;
+    border: 5px solid rgb(123, 77, 123);
+    border-radius: 20px;
+    background-color: rgb(45, 26, 69);
+    text-align: center;
+}
+
+h1 {
+    font-size: 33px;
+    color: white;
+    margin-bottom: 1px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.choice {
+    width: 200px;
+    height: 170px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.choice:hover {
+    transform: translateY(-8px);
+}
+
+.emoji {
+    display: block;
+    font-size: 70px;
+    margin-bottom: 5px;
+}
+
+.rock {
+    border: 3px solid #2874e8;
+    color: #2874e8;
+}
+
+.paper {
+    border: 3px solid #20a45a;
+    color: #20a45a;
+}
+
+.scissors {
+    border: 3px solid #ef4050;
+    color: #ef4050;
+}
+
+
+
+
+.result-box {
+    background-color: white;
+    width: 800px;
+    border-radius: 18px;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    left: 450px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(179, 100, 100, 0.08);
+}
+
+.player h2 {
+    margin-bottom: 1px;
+    color: #2874e8;
+}
+
+.player:last-child h2 {
+    color: #ef4050;
+}
+
+.circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.player-circle {
+    background-color: #e8efff;
+}
+
+.computer-circle {
+    background-color: #ffe8eb;
+}
+
+.vs {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.message {
+    background-color: white;
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 18px;
+    position: absolute;
+    top: 480px;
+    left: 450px;
+    width: 800px;
+}
+
+.message h2 {
+    color: #159447;
+    font-size: 28px;
+}
+
+.message p {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.score-box {
+    background-color: white;
+    margin-top: 12px;
+    padding: 20px;
+    border-radius: 18px;
+    position: absolute;
+    top: 600px;
+    left: 450px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.score h3 {
+    color: #555;
+    font-size: 15px;
+}
+
+.score p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+.play-again {
+    margin-top: 15px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+       position: absolute;
+    top: 700px;
+    left: 750px;
+    
+
+    background-color: #6246d9;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.play-again:hover {
+    background-color: #4931b5;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 20px 10px;
+        border: 3px solid rgb(123, 77, 123);
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 8px;
+        padding-top: 5px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .choice {
+        width: 180px;
+        height: 140px;
+        font-size: 20px;
+    }
+
+    .emoji {
+        font-size: 55px;
+        margin-bottom: 5px;
+    }
+
+    .result-box {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 15px 10px;
+        margin: 10px auto;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        font-size: 45px;
+        margin: auto;
+    }
+
+    .vs {
+        font-size: 20px;
+    }
+
+    .message {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .message h2 {
+        font-size: 22px;
+    }
+
+    .message p {
+        font-size: 16px;
+    }
+
+    .score-box {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    .score {
+        width: 30%;
+    }
+
+    .score h3 {
+        font-size: 14px;
+    }
+
+    .score p {
+        font-size: 20px;
+    }
+
+    .play-again {
+        position: static;
+        display: block;
+        margin: 20px auto 0;
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+    </style>
+</head>
+<body>
+      <div class="container">
+
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">Choose your move</p>
+
+        <div class="choices">
+
+            <button class="choice rock">
+                <span class="emoji">🪨</span>
+                <span>ROCK</span>
+            </button>
+
+            <button class="choice paper">
+                <span class="emoji">📄</span>
+                <span>PAPER</span>
+            </button>
+
+            <button class="choice scissors">
+                <span class="emoji">✂️</span>
+                <span>SCISSORS</span>
+            </button>
+
+        </div>
+
+
+        <div class="result-box">
+
+            <div class="player">
+                <h2>YOU</h2>
+                <div class="circle player-circle">
+                    🪨
+                </div>
+            </div>
+
+            <div class="vs">
+                VS
+            </div>
+
+            <div class="player">
+                <h2>COMPUTER</h2>
+                <div class="circle computer-circle">
+                    ✂️
+                </div>
+            </div>
+
+        </div>
+
+
+    
+        <div class="message">
+            <h2>YOU WIN!</h2>
+            <p>Rock beats Scissors</p>
+        </div>
+
+
+    
+        <div class="score-box">
+
+            <div class="score">
+                <h3>YOU</h3>
+                <p>2</p>
+            </div>
+
+            <div class="score">
+                <h3>DRAW</h3>
+                <p>0</p>
+            </div>
+
+            <div class="score">
+                <h3>COMPUTER</h3>
+                <p>1</p>
+            </div>
+
+        </div>
+
+        <button class="play-again">
+            🔄 &nbsp; PLAY AGAIN
+        </button>
+
+    </div>
+
+    <script src="script_RPS.js"></script>
+</body>
+</html>
